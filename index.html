@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:scipt="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="tabs">
+        <div class="tab whiteborder">border-radius</div>
+        <div class="tab">padding</div>
+        <div  class="tab">position</div>
+        <div class="tabContent">
+            <div>Верхній лівий радіус:
+                <input type="range" id="rtl" min="0" max="100" value="0" oninput="generateRadius()">
+                <input type="text" id="ttl" value="0">
+            </div>
+            <div>Верхній правий радіус:
+                <input type="range" id="rtr" min="0" max="100" value="0" oninput="generateRadius()">
+                <input type="text" id="ttr" value="0">
+            </div>
+            <div>Нижній правий радіус:
+                <input type="range" id="rbr" min="0" max="100" value="0" oninput="generateRadius()">
+                <input type="text" id="tbr" value="0">
+            </div>
+            <div>Нижній лівий радіус:
+                <input type="range" id="rbl" min="0" max="100" value="0" oninput="generateRadius()">
+                <input type="text" id="tbl" value="0">
+            </div>
+            <div class="output-wrapper">
+                <div id="radius-block"></div>
+                <div class="tarea">
+                    <label>Code:
+                    <textarea class="code-output"></textarea></label>
+                </div>
+            </div>
+        </div>
+        <div class="tabContent">
+            <div>Верхній паддінг:
+                <input type="range" id="rpt" min="0" max="100" value="0" oninput="generatePadding()">
+                <input type="text" id="tpt" value="0">
+            </div>
+            <div>Правий паддінг:
+                <input type="range" id="rpr" min="0" max="100" value="0" oninput="generatePadding()">
+                <input type="text" id="tpr" value="0">
+            </div>
+            <div>Нижній паддінг:
+                <input type="range" id="rpb" min="0" max="100" value="0" oninput="generatePadding()">
+                <input type="text" id="tpb" value="0">
+            </div>
+            <div>Лівий паддінг:
+                <input type="range" id="rpl" min="0" max="100" value="0" oninput="generatePadding()">
+                <input type="text" id="tpl" value="0">
+            </div>
+            <div class="output-wrapper">
+                <div id="padding-block-outside">
+                <div id="padding-block-inside"></div>
+                </div>
+                <div class="tarea">
+                    <label>Code:
+                    <textarea class="code-output"></textarea></label>
+                </div>
+            </div>
+        </div>
+        <div class="tabContent">
+            <div style="display: flex">
+                <div style="padding-right: 10px">
+                    <div>Верх:
+                        <input type="range" id="rpst" min="-100" max="1000" value="0" oninput="generatePosition()">
+                        <input type="text" id="tpst" value="0">
+                    </div>
+                    <div>Ліво:
+                        <input type="range" id="rpsl" min="-100" max="1000" value="0" oninput="generatePosition()">
+                        <input type="text" id="tpsl" value="0">
+                    </div>
+                </div>
+<!--                <div>-->
+<!--                    <div>Право:-->
+<!--                        <input type="range" id="rpsr" min="-100" max="600" value="0" oninput="generatePosition()">-->
+<!--                        <input type="text" id="tpsr" value="0">-->
+<!--                    </div>-->
+<!--                    <div>Низ:-->
+<!--                        <input type="range" id="rpsb" min="-100" max="300" value="0" oninput="generatePosition()">-->
+<!--                        <input type="text" id="tpsb" value="0">-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+            <select id="select-position">
+                <option value="static">static</option>
+                <option value="relative">relative</option>
+                <option value="absolute">absolute</option>
+                <option value="fixed">fixed</option>
+                <option value="sticky">sticky</option>
+            </select>
+            <div class="output-wrapper" style="margin-bottom: 500px">
+                <div id="position-block-outside">
+                    <div id="position-block-inside"></div>
+                </div>
+                <div class="tarea">
+                    <label>Code:
+                        <textarea class="code-output"></textarea></label>
+                    <br>
+                </div>
+
+            </div>
+            <h1>Скрол був доданий для зображення стлю fixed</h1>
+        </div>
+    </div>
+    <script src="border-radius.js"></script>
+    <script src="padding.js"></script>
+    <script src="position.js"></script>
+</body>
+</html>
